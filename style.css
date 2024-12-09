@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: figtree;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    width: 840px;
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 62px 92px;
+    border-radius: 16px;
+    border: 1px solid #E3E8EF;
+    background: #FFF;
+    box-shadow: 0px 0px 184px 0px rgba(0, 0, 0, 0.25);
+}
+
+.text-todo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+}
+
+.tittle-todo {
+    color: #252526;
+    text-align: center;
+    font-family: Figtree;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+.discription-todo {
+    color: #878787;
+    text-align: center;
+    font-family: Figtree;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.search-header {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    border-radius: 25px;
+    border: 1px solid #E3E8EF;
+    background: #F6F7F9;
+    gap: 12px;
+    position: relative;
+    overflow: hidden;
+    padding: 14px 52px 14px 20px;
+}
+
+.search-header textarea {
+    border: none;
+    outline: none;
+    resize: none;
+    line-height: 140%;
+    background-color: transparent;
+    font-size: 14px;
+    width: inherit;
+    overflow-y: auto;
+    max-height: 120px;
+}
+
+
+
+
+.add-button {
+    display: flex;
+    border: none;
+    outline: none;
+    width: 34px;
+    height: 34px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #64ED80;
+    position: absolute;
+    right: 7px;
+    bottom: 7px;
+    cursor: pointer;
+}

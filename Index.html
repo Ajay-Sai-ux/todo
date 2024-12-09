@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="text-todo">
+            <h1 class="tittle-todo">To-do List</h1>
+            <p class="discription-todo">Project: Responsive Todo List App</p>
+        </div>
+
+        <div class="search-header">
+            <textarea id="editor" class="text-editor" placeholder="Add task" rows="1"></textarea>
+            <button class="add-button">
+                <img src="./Assets/Search.svg" alt="Search icon">
+            </button>
+        </div>
+
+        <div class="inner-container">
+            <div class="search-tab">
+                <div class="tab">
+                    <button class="tab active" data-target="all">All</button>
+                    <button class="tab" data-target="completed">Completed</button>
+                    <button class="tab" data-target="pending">Pending</button>
+                </div>
+                <input type="text" placeholder="Search task">
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const textArea = document.querySelector(".text-editor");
+
+        textArea.addEventListener("input", e => {
+            e.target.style.height = "auto";
+            e.target.style.height = `${e.target.scrollHeight}px`;
+        });
+        
+    </script>
+
+</body>
+
+</html>
