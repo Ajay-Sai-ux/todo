@@ -61,7 +61,7 @@ body {
 
 .search-header {
     display: flex;
-    width: 100%;
+    width: -webkit-fill-available;
     flex-direction: row;
     align-items: flex-end;
     justify-content: center;
@@ -105,3 +105,119 @@ body {
     bottom: 7px;
     cursor: pointer;
 }
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    width: -webkit-fill-available;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 24px;
+    border: 1px solid #E3E8EF;
+    background: #F6F7F9;
+}
+
+.tab-container {
+    display: flex;
+    width: inherit;
+    justify-content: space-between;
+}
+
+.tabs {
+    display: flex;
+    gap: 6px;
+}
+
+
+.tab {
+    display: flex;
+    height: 32px;
+    padding: 10px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 19px;
+    border: 1px solid #E3E8EF;
+    background: #FFF;
+    cursor: pointer;
+}
+
+.delete-complteted {
+    color: #0059FF;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.search-tabs {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    border-radius: 25px;
+    border: 1px solid #E3E8EF;
+    background: #F6F7F9;
+    gap: 12px;
+    position: relative;
+    overflow: hidden;
+    padding: 14px 52px 14px 20px;
+    background-color: white;
+    outline: none;
+}
+
+.search-tabs:focus {
+    outline: 2px solid #64ED80;
+    outline-offset: 2px;
+ }
+
+.checkbox input[type="checkbox"] {
+    width: 21px;
+    height: 21px;
+    accent-color: #64ED80;
+}
+
+.checkbox {
+    padding: 6px 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.tasks {
+    display: flex;
+}
+
+.task-container {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    align-self: stretch;
+    border-radius: 16px;
+    border: 1px solid #E3E8EF;
+    background: #FFF;
+    padding: 6px 0;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 6px 12px;
+}
+
+.task-content {
+    line-height: 140%;
+}
+
+.timing {
+    font-size: 12px;
+    line-height: 200%;
+    color: rgb(75, 75, 75);
+    padding-left: 24px;
+}
+
+.task-container img {
+    padding: 6px 12px;
+}
+

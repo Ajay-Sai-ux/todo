@@ -23,18 +23,42 @@
         </div>
 
         <div class="inner-container">
-            <div class="search-tab">
-                <div class="tab">
+            <div class="tab-container">
+                <div class="tabs">
                     <button class="tab active" data-target="all">All</button>
                     <button class="tab" data-target="completed">Completed</button>
                     <button class="tab" data-target="pending">Pending</button>
                 </div>
-                <input type="text" placeholder="Search task">
+
+                <button class="delete-complteted">Delete Completed</button>
             </div>
+            <input class="search-tabs" type="text" placeholder="Search task">
+
+            <div class="tasks">
+                <div class="task-container">
+                    <div class="checkbox">
+                        <input type="checkbox">
+                    </div>
+                    
+                    <div class="task">
+                        <p class="task-content">Dummy task content</p>
+                        <p class="timing">1d</p>
+                    </div>
+                    <img src="./Assets/Delete.svg" alt="Delete">
+                </div>
+            </div>
+
+
         </div>
+
+        
 
     </div>
 
+    
+
+
+    <!-- function for Search expaning -->
     <script>
         const textArea = document.querySelector(".text-editor");
 
