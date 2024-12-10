@@ -16,9 +16,9 @@
         </div>
 
         <div class="search-header">
-            <textarea id="editor" class="text-editor" placeholder="Add task" rows="1"></textarea>
-            <button class="add-button">
-                <img src="./Assets/Search.svg" alt="Search icon">
+            <textarea id="taskInput" class="text-editor" placeholder="Add task" rows="1"></textarea>
+            <button onclick="addTask()" class="add-button">
+                <img draggable="false" src="./Assets/Search.svg" alt="Search icon">
             </button>
         </div>
 
@@ -34,40 +34,14 @@
             </div>
             <input class="search-tabs" type="text" placeholder="Search task">
 
-            <div class="tasks">
-                <div class="task-container">
-                    <div class="checkbox">
-                        <input type="checkbox">
-                    </div>
-                    
-                    <div class="task">
-                        <p class="task-content">Dummy task content</p>
-                        <p class="timing">1d</p>
-                    </div>
-                    <img src="./Assets/Delete.svg" alt="Delete">
-                </div>
-            </div>
-
-
+            <div class="tasks" id="taskList"></div>
         </div>
 
-        
+
 
     </div>
 
-    
-
-
-    <!-- function for Search expaning -->
-    <script>
-        const textArea = document.querySelector(".text-editor");
-
-        textArea.addEventListener("input", e => {
-            e.target.style.height = "auto";
-            e.target.style.height = `${e.target.scrollHeight}px`;
-        });
-        
-    </script>
+    <script src="./script.js"></script>
 
 </body>
 

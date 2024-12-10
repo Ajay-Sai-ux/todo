@@ -186,6 +186,8 @@ body {
 
 .tasks {
     display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
 .task-container {
@@ -219,5 +221,6 @@ body {
 
 .task-container img {
     padding: 6px 12px;
+    cursor: pointer;
 }
 
