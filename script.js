@@ -50,11 +50,16 @@ function addTask() {
   }
 }
 
-const taskList = document.getElementById("taskList");
-taskList.addEventListener("click", function(event) {
-    if (event.target.classList.contains("delete-btn")) {
-        const taskContainer = event.target.closest(".task-container");
-        taskContainer.remove();
 
+// delete function 
+taskList.addEventListener("click", function(event) {
+
+  const target = event.target;
+    if (target.classList.contains("delete-btn")) {
+        const taskContainer = target.closest(".task-container");
+        taskContainer.remove();
+    } else if (target.type === "checkbox") {
+      const taskContent = target.closest('.task-container').querySelector(".task-content");
+      taskContent.classList.toggle("completed");
     }
 })

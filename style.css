@@ -224,3 +224,7 @@ body {
     cursor: pointer;
 }
 
+.task-content.completed{
+    text-decoration: line-through;
+    opacity: .5;
+}
