@@ -50,6 +50,45 @@ function addTask() {
   }
 }
 
+// filter function
+const tabs = document.querySelectorAll(".tab");
+const taskList = document.getElementById("taskList");
+
+tabs.forEach(function (tab) {
+  tab.addEventListener("click", function (e) {
+
+    tabs.forEach(function (t) {
+      t.classList.remove("tab-active");
+    });
+
+    // Add the 'tab-active' class to the clicked tab
+    tab.classList.add("tab-active");
+
+    const target = e.target.getAttribute("data-target");
+    filterTask(target);
+  })
+})
+
+function filterTask(category) {
+  const tasks = taskList.querySelectorAll(".task-container");
+
+  tasks.forEach((task) => {
+    const taskContent = task.querySelector(".task-content");
+    const isCompleted = taskContent.classList.contains("completed");
+
+    if (category === "all") {
+      task.style.display = "flex";
+    } else if (category === "completed" && isCompleted) {
+      task.style.display = "flex";
+    } else if (category === "pending" && !isCompleted) {
+      task.style.display = "flex";
+    } else {
+      task.style.display = "none";
+    }
+  });
+}
+
+
 
 // delete function 
 taskList.addEventListener("click", function(event) {
@@ -63,3 +102,19 @@ taskList.addEventListener("click", function(event) {
       taskContent.classList.toggle("completed");
     }
 })
+
+
+// delete completed
+const deleteButton = document.querySelector(".delete-completed");
+
+deleteButton.addEventListener("click", function () {
+  const tasks = document.querySelectorAll(".task-container");
+
+  tasks.forEach((task) => {
+    const taskContent = task.querySelector(".task-content");
+
+    if (taskContent.classList.contains("completed")) {
+      task.remove();
+    }
+  });
+});

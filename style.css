@@ -11,19 +11,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 .container{
     width: 840px;
-    margin: 40px;
+    margin: 16px;
     display: flex;
     flex-direction: column;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 12px;
-    padding: 62px 92px;
+    padding: 24px;
     border-radius: 16px;
     border: 1px solid #E3E8EF;
     background: #FFF;
@@ -142,7 +141,12 @@ body {
     cursor: pointer;
 }
 
-.delete-complteted {
+.tab-active {
+    background-color: #64ED80;
+    color: black;
+}
+
+.delete-completed {
     color: #0059FF;
     text-decoration-line: underline;
     text-decoration-style: solid;
